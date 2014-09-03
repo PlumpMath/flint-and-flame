@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Ember Starter Kit</title>
+  <title>flint and flame</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -24,6 +24,9 @@
 
   <script type='text/x-handlebars' data-template-name='about'>
     <h1>About the Fire Spirits</h1>
+    <p>There are {{productsCount}} products</p>
+    <img {{bind-attr src="logo"}} alt='Logo'>
+    <p> it is currently {{time}} </p>
   </script>
 
   <script type='text/x-handlebars' data-template-name='buy'>

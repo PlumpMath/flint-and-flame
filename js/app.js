@@ -12,3 +12,13 @@ App.Router.map(function() {
 //     return ['red', 'yellow', 'blue'];
 //   }
 // });
+
+App.AboutController = Ember.Controller.extend({
+	productsCount:7,
+	logo: 'img/on.png',
+	time: function() {
+		return (new Date()).toTimeString()
+	}.property()
+});
+
+
