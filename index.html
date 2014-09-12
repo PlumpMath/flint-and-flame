@@ -10,6 +10,9 @@
 </head>
 
 <body>
+  <!-- EVERYTHING YOU SEE ON A PAGE IN EMBER IS A SCRIPT! Which kind of sucks when you're trying to use auto-complete features in SublimeText. Good luck adding notes within the script tags -->
+
+  <!-- 'application' is the header and footer, which remains the same in every template. Subsequent templates are referenced via the {{outlet}}. #link-to replaces <a href=""> in ember. You can bind this to an HTML tagName as shown in Home, About, and Products. Clicking this will change the {{outlet}} -->
   <script type='text/x-handlebars' data-template-name='application'>
     <div class='navbar navbar-default'>
       <div class='container'>
@@ -32,6 +35,9 @@
       <p class='pull-right'>{{#link-to 'credits'}}Credits{{/link-to}}</p>
     </footer>
   </script>
+  <!-- 'index' is automatically shown as the default view/template. // as shown below, you can add classes and ID's to ember, #link-to's. When inspecting in the console, #link-to will be converted to <a href="">. Check out what it converts to in the console. It's pretty trippy! id, class, href added. Within the <a></a> there are multiple scripts with id, types added! -->
+  <!-- Notice the {{bind-attr element="value"}} below. Neat stuff. Apparently that is necessary with images but not links? I think that's used for protecting image space/position when the HTML loads before the JS loads -->
+  <!-- Browse All {{productsCount}} is a variable calculated in js/app.js -->
   <script type='text/x-handlebars' data-template-name='index'>
     <div class='jumbotron'>
       <h1>Welcome to The Flint &amp; Flame!</h1>
@@ -53,7 +59,7 @@
       <div class='col-sm-8'>
         <h1>About The Fire Sprites</h1>
         <p>Contact {{contactName}} for more info!</p>
-        <p>Current Status: {{open}}.</p>
+        <p>Current day: {{day}}.</p>
       </div>
     </div>
   </script>
